@@ -1,0 +1,298 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Lestrato App Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="description" content="Lestrato App">
+  <meta name="author" content="Miguel Manchego">  
+
+<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/custom.css" />
+    
+    
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/jquery.mobile-1.2.0.min.js"></script>
+<script src="js/lestrato.js"></script>
+</head>
+
+<body>
+
+<!-- PORTADA -->
+<div data-role="page" id="portada">  
+   <div data-role="content" >
+        <div id="titularHome">
+        <div id="logoPortada">   
+            <img src="img/logo.png" />        
+            <p>Lestrato - Rock & Conciertos trabaja para disfrutar en Ourense y en Galicia de los mejores conciertos de rock, ya sean de bandas locales, regionales, nacionales y/o internacionales.</p>
+            <p>
+            [ <a href="#nosotros">Leer Más</a> ]            
+            </p>
+        </div><!--#logoPortada-->
+         
+        </div><!--titularHome-->
+      <div class="ui-grid-b" id="mainNav">
+        <div class="ui-block-a">
+            <a href="#bandas" id="carteleraLink">
+            Nuestras Bandas
+            </a>
+        </div>
+	   <div class="ui-block-b">
+            <a href="#conciertos" id="estrenosLink">
+            Próximos Conciertos
+            </a>
+        </div>
+	   <div class="ui-block-c">
+            <a href="#cuece" id="promosLink">
+            Lo que se Cuece
+            </a>
+        </div>
+      </div>
+   </div>   
+</div>
+<!-- /PORTADA -->
+
+
+<!-- nosotros -->
+<div data-role="page" id="nosotros" data-title="nosotros">
+   <div data-role="header"  data-position="inline">
+    <a href="#bandas" data-role="button" data-icon="back"></a>  
+      <h1>
+        <img src="img/mini-logo.png" />
+      </h1> 
+   </div>
+   <div data-role="content" class="contenidos">   
+      <p>
+        <img src="img/logo.png" /> 
+      </p>
+      <p>
+        Trabajamos para disfrutar de los mejores conciertos de rock, aportando nuestro esfuerzo e ilusión tanto como organizadores, colaboradores o informadores.
+      </p>
+      <h2>Contacto</h2>
+      <p>
+         Curros Enríquez 34, Entrlo. 1º 32003 - Ourense (España) 
+        (+34) 615149396 <br />
+        <a href="mailto:info@lestrato.com">info@lestrato.com</a> 
+      </p>
+   </div>
+   <div data-role="footer" class="ui-bar">
+      <a href="#bandas" data-role="button" data-icon="back">Volver</a>   
+   </div>
+</div>
+<!-- /banda1 -->
+
+
+<!-- bandas -->
+<div data-role="page" id="bandas" data-title="bandas">
+   <div data-role="header"  data-position="inline">
+    <a href="#portada" data-role="button" data-icon="back"></a>  
+      <h1>
+        <img src="img/mini-logo.png" />
+      </h1> 
+   </div>
+   <div data-role="content">   
+      <h2>Nuestras Bandas</h2>
+        <div class="ui-grid-a" id="bandasContent">
+	       <div class="ui-block-a">
+                <a href="#banda1">
+                    <img src="img/the-new-roses-band1.jpg" />
+                </a>                    
+           </div>
+           
+	       <div class="ui-block-b">
+                <a href="#banda2">
+                    <img src="img/devils_train_new-460x460.jpg" />
+                </a>
+           </div>
+        </div><!-- /grid-a -->
+        
+        <div class="ui-grid-a" id="bandasContent">
+	       <div class="ui-block-a">
+                <a href="#banda3">
+                    <img src="img/hardboneband-460x460.jpg" />
+                </a>
+           </div>
+           
+	       <div class="ui-block-b">
+                <a href="#banda4">
+                    <img src="img/those_furious_flames_band-460x460.jpg" />
+                </a>
+           </div>
+        </div><!-- /grid-a -->            
+   </div>
+   <div data-role="footer" class="ui-bar">
+      <a href="#portada" data-role="button" data-icon="back">Volver</a>   
+   </div>
+</div>
+<!-- /bandas -->
+
+
+<!-- banda1 -->
+<div data-role="page" id="banda1" data-title="banda1">
+   <div data-role="header"  data-position="inline">
+    <a href="#bandas" data-role="button" data-icon="back"></a>  
+      <h1>
+        <img src="img/mini-logo.png" />
+      </h1> 
+   </div>
+   <div data-role="content" class="contenidos">   
+      <h2>The New Roses</h2>
+        <p>
+            <img src="img/the-new-roses-band1.jpg" />
+        </p>
+        <p>
+        Tesoros menudo florecen en secreto. Para el nuevo Rosas que impacta con franqueza. La banda sale de la esquina de Alemania, donde el sangesfreudige Loreley la nave seduce personas - de la región de Rheingau. ¿Quién viene a partir de ahí, es, probablemente, no se asocia con el rock y los gustos. ¿Quién es, pues, una declaración de los mejores como frontman Timmy Rough lo hace, "nos adaptamos a ninguna tendencia, queremos para el rock and roll con aseado sentimiento azul para jugar", la ley no se ajusta sólo en el paisaje.
+        </p>
+   </div>
+   <div data-role="footer" class="ui-bar">
+      <a href="#bandas" data-role="button" data-icon="back">Volver</a>   
+   </div>
+</div>
+<!-- /banda1 -->
+
+
+<!-- banda2 -->
+<div data-role="page" id="banda2" data-title="banda2">
+   <div data-role="header"  data-position="inline">
+    <a href="#bandas" data-role="button" data-icon="back"></a>  
+      <h1>
+        <img src="img/mini-logo.png" />
+      </h1> 
+   </div>
+   <div data-role="content" class="contenidos">   
+      <h2>Devil's Train</h2>
+        <p>
+            <img src="img/devils_train_new-460x460.jpg" />
+        </p>
+        <p>
+        Recién fundada dura y pesada banda de RD Liapakis DEVIL'S TRAIN sólo ha firmado un trato de registro de la enorme empresa de distribución EDEL / la música del oído que es la empresa de bandas como Deep Purple, EXTRANJERO, EUROPA, SI, GAMMA RAY, LAGUNS, Kamelot, DURAN DURAN, MARILLION, Chickenfoot, NAZARET, STATUS qUO, Ian Gillan, TURBO NEGRO, Jethro Tull, Steve Morse y más.
+        </p>
+        
+   </div>
+   <div data-role="footer" class="ui-bar">
+      <a href="#bandas" data-role="button" data-icon="back">Volver</a>   
+   </div>
+</div>
+<!-- /banda2 -->
+
+
+<!-- banda3 -->
+<div data-role="page" id="banda3" data-title="banda3">
+   <div data-role="header"  data-position="inline">
+    <a href="#bandas" data-role="button" data-icon="back"></a>  
+      <h1>
+        <img src="img/mini-logo.png" />
+      </h1> 
+   </div>
+   <div data-role="content" class="contenidos">   
+      <h2>Hardbone</h2>
+        <p>
+            <img src="img/hardboneband-460x460.jpg" />
+        </p>
+        <p>
+        Rock 'N' no es un estilo musical es una forma de vida, un estilo de vida! Estos cinco chicos, que están completamente llenos de testosterona están mostrando el dedo medio a todas las personas que no pueden o no quieren entender eso! Desde la fundación de la banda a finales de 2006 los clichés están siendo alimentados, las plazas se enfurecieron y el sonido de la vieja escuela está siendo lo más celebrado, que muchos oyentes tienen que frotarse los ojos, oídos y otras partes del cuerpo! Con su en noviembre de 2010 álbum debut lanzado los chicos ya mostraban las cuerdas a todo el mundo. Pero con su siguiente lanzamiento el 13 de abril 2012 que voy a poner la guinda del pastel! No se trata de reinventar el género, complaciendo mamá o salvar el mundo. Es como en la vida real: Dirty y duro, pero con mucha diversión, burla de sí mismo y un guiño en la cima! El título del álbum comprende todo lo que se puede decir sobre Hardbone: Esto es Rock 'N'!
+        </p>
+   </div>
+   <div data-role="footer" class="ui-bar">
+      <a href="#bandas" data-role="button" data-icon="back">Volver</a>   
+   </div>
+</div>
+<!-- /banda3 -->
+
+
+<!-- banda4 -->
+<div data-role="page" id="banda4" data-title="banda4">
+   <div data-role="header"  data-position="inline">
+    <a href="#bandas" data-role="button" data-icon="back"></a>  
+      <h1>
+        <img src="img/mini-logo.png" />
+      </h1> 
+   </div>
+   <div data-role="content" class="contenidos">   
+      <h2>Those Furious Flames</h2>
+        <p>
+            <img src="img/those_furious_flames_band-460x460.jpg" />
+        </p>
+        <p>
+        Rock 'N' no es un estilo musical es una forma de vida, un estilo de vida! Estos cinco chicos, que están completamente llenos de testosterona están mostrando el dedo medio a todas las personas que no pueden o no quieren entender eso! Desde la fundación de la banda a finales de 2006 los clichés están siendo alimentados, las plazas se enfurecieron y el sonido de la vieja escuela está siendo lo más celebrado, que muchos oyentes tienen que frotarse los ojos, oídos y otras partes del cuerpo! Con su en noviembre de 2010 álbum debut lanzado los chicos ya mostraban las cuerdas a todo el mundo. Pero con su siguiente lanzamiento el 13 de abril 2012 que voy a poner la guinda del pastel! No se trata de reinventar el género, complaciendo mamá o salvar el mundo. Es como en la vida real: Dirty y duro, pero con mucha diversión, burla de sí mismo y un guiño en la cima! El título del álbum comprende todo lo que se puede decir sobre Hardbone: Esto es Rock 'N'!
+        </p>
+   </div>
+   <div data-role="footer" class="ui-bar">
+      <a href="#bandas" data-role="button" data-icon="back">Volver</a>   
+   </div>
+</div>
+<!-- /banda4 -->
+
+
+<!-- conciertos -->
+<div data-role="page" id="conciertos" data-title="conciertos">
+   <div data-role="header">
+    <a href="#portada" data-role="button" data-icon="back"></a>  
+      <h1>
+        <img src="img/mini-logo.png" />
+      </h1> 
+   </div>
+   <div data-role="content">   
+      <h2>Conciertos</h2>
+        <ul data-role="listview" data-split-icon="plus" data-theme="a" data-split-theme="b" data-split-icon="plus" data-inset="true" id="conciertosList">
+        
+        </ul>           
+   </div>
+   <div data-role="footer" class="ui-bar">
+        <a href="#portada" data-role="button" data-icon="back">Volver</a>         
+   </div>
+</div>
+<!-- /conciertos -->
+
+
+<!-- cuece -->
+<div data-role="page" id="cuece" data-title="cuece">
+   <div data-role="header">
+    <a href="#portada" data-role="button" data-icon="back"></a>  
+      <h1>
+        <img src="img/mini-logo.png" />
+      </h1> 
+   </div>
+   <div data-role="content">   
+      <h2>Lo que se cuece</h2>
+        <ul data-role="listview" data-split-icon="plus" data-theme="a" data-split-theme="b" data-split-icon="plus" data-inset="true" id="cueceList">
+        
+        </ul>           
+   </div>
+   <div data-role="footer" class="ui-bar">
+        <a href="#portada" data-role="button" data-icon="back">Volver</a>         
+   </div>
+</div>
+<!-- /cuece -->
+
+
+<!-- noticia -->
+<div data-role="page" id="noticia" data-title="noticia">
+   <div data-role="header">
+    <a href="#cuece" data-role="button" data-icon="back"></a>  
+      <h1>
+        <img src="img/mini-logo.png" />
+      </h1> 
+   </div>
+   <div data-role="content">   
+      <h2>Noticia</h2>
+        <div data-role="content"></div>        
+   </div>
+   <div data-role="footer" class="ui-bar">
+        <a href="#cuece" data-role="button" data-icon="back">Volver</a>         
+   </div>
+</div>
+<!-- /noticia -->
+
+
+  
+</body>
+</html>

@@ -1,0 +1,194 @@
+* {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+}
+html, body {
+    height : 100%;    
+}
+
+h2 {
+    font-size: 28px;
+    color: #FFFFFF;    
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+    h2::after {
+        content:"";
+        display:block;
+        width: 60px;
+        height: 2px;
+        background-color: #840000;    
+        margin-top: 7px;    
+    }
+
+
+/**********************************
+  Portada
+**********************************/  
+#portada {
+    background-color: #171717;    
+    height: 100%;
+}
+#portada .ui-content{
+    background-color: #171717;    
+    text-align: center;
+    min-height: 100%;    
+    background-image: url(../img/fondo1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.ui-body-c, .ui-overlay-c {
+    text-shadow: none; 
+    color:#aaa; 
+}
+.ui-header .ui-title, .ui-footer .ui-title {  
+  margin: 0.4em 30%;  
+}
+
+
+/*********************************
+  Nosotros
+**********************************/
+#nosotros, #nosotros .ui-content {
+    background-color: #171717;    
+    height: 100%;
+}   
+.contenidos a {
+    color:#fff;
+    text-decoration: none;
+}
+
+/**********************************
+  Bandas
+**********************************/
+#bandas {
+    background-color: #171717;    
+    height: 100%;
+}    
+#bandas .ui-content{
+    background-color: #171717;
+    min-height: 100%; 
+}
+#bandas a{
+    display: block;
+    background-color:#840000;
+}
+    #bandas a:hover img{
+        opacity: 0.5;
+    }
+#bandasContent img{
+    max-width: 100%;
+    display: block;
+}
+
+.contenidos img{
+    max-width: 100%;
+}
+#banda1, #banda1 .ui-content, #banda2, #banda2 .ui-content, #banda3, #banda3 .ui-content, #banda4, #banda4 .ui-content {
+    background-color: #171717;    
+    height: 100%;
+} 
+/**********************************
+  Cuece
+**********************************/
+#cuece {
+    background-color: #171717;    
+    height: 100%;
+}    
+#cuece .ui-content{
+    background-color: #171717;
+    min-height: 100%; 
+}
+
+/**********************************
+  Noticia
+**********************************/
+#noticia {
+    background-color: #171717;    
+    height: 100%;
+}    
+#noticia .ui-content{
+    background-color: #171717;
+    min-height: 100%; 
+}
+#noticia img {
+    max-width: 100%;
+}
+
+
+/**********************************
+  Conciertos
+**********************************/
+#conciertos {
+    background-color: #171717;    
+    height: 100%;
+}    
+#conciertos .ui-content{
+    background-color: #171717;
+    min-height: 100%; 
+}
+
+
+/***************************************
+  Navigation
+****************************************/
+#logoPortada {
+    padding-bottom: 50px;
+    padding-top: 35px;
+    background-color: rgba(0,0,0,0.8);
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+}
+    #logoPortada a{
+        text-decoration: none;
+        color:#FFF;
+    }
+#mainNav {
+    background: transparent;
+    position: absolute;
+    bottom: 20px;
+    width: 92%;
+    left: 50%;
+    margin-left: -46%;
+}
+#mainNav a{
+    display: block;
+    color:#FFF;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: #840000;
+    padding-bottom: 10px;
+    padding-top: 50px;
+    margin-top: 5px;
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 18px;    
+}
+    a#carteleraLink {
+        background-image: url(../img/icon1.png);        
+    }
+    a#estrenosLink {
+        background-image: url(../img/icon2.png);
+    }
+    a#promosLink {
+        background-image: url(../img/icon3.png);
+    }
+    
+    #mainNav a:hover{
+        background-color: #ac0000;
+        padding-top: 55px;
+        margin-top: 0px;
+        transition: 0.5s;
+    }
+a#estrenosLink, a#promosLink{
+    border-left: 1px solid #ffb8b8;
+}
+
+  

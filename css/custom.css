@@ -3,10 +3,18 @@
     -moz-box-sizing:border-box; /* Firefox */
 }
 html, body {
-    height : 100%;    
+    height : 100%;
 }
 
-h2 {
+p {
+    color:#ccc;
+}
+
+h1.ui-title a:hover {
+    opacity: 0.5;    
+}
+
+h2.title {
     font-size: 28px;
     color: #FFFFFF;    
     font-weight: 300;
@@ -14,7 +22,7 @@ h2 {
     padding-bottom: 10px;
     margin-top: 10px;
 }
-    h2::after {
+    h2.title::after {
         content:"";
         display:block;
         width: 60px;
@@ -23,6 +31,34 @@ h2 {
         margin-top: 7px;    
     }
 
+h3 {
+    font-size: 22px;
+    color: #FFFFFF;    
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ui-li-aside.ui-li-desc {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+    position: relative;
+    width: 30%;
+    float: right;
+    right: 0px;
+    top:0px;
+}
+.ui-listview > li h3 {
+    font-size: 0.8em;
+}
+.ui-listview > .ui-li-has-thumb > .ui-btn {
+    padding-left: 5.5em;
+}
 
 /**********************************
   Portada
@@ -46,7 +82,7 @@ h2 {
     color:#aaa; 
 }
 .ui-header .ui-title, .ui-footer .ui-title {  
-  margin: 0.4em 30%;  
+  margin: 0px 30%;  
 }
 
 
@@ -73,7 +109,7 @@ h2 {
     background-color: #171717;
     min-height: 100%; 
 }
-#bandas a{
+#bandasContent a{
     display: block;
     background-color:#840000;
 }
@@ -131,7 +167,24 @@ h2 {
     background-color: #171717;
     min-height: 100%; 
 }
-
+.fechaConcierto {
+    color: #FFFFFF;
+    float: left;
+    margin-right: 15px;
+    padding: 10px 15px;
+    text-align: center;
+    width: auto;
+    background-color: #840000;
+}
+.datosConcierto {
+    clear: both;
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+.datosConcierto p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
 
 /***************************************
   Navigation

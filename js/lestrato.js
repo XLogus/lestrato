@@ -3,13 +3,12 @@ var conciertos;
 var pelas;
 var bandas;
 
-$(document).bind( "pagebeforechange", function( e, data ) {        
-    
+$(document).bind( "pagebeforechange", function( e, data ) {  
     if ( typeof data.toPage === "string" ) {
         detener_musica();
         
-        var u = $.mobile.path.parseUrl( data.toPage );
-        var params = hashParams(u.hash);
+        var url = $.mobile.path.parseUrl( data.toPage );
+        var params = hashParams(url.hash);
         
         var re1 = /^#conciertos/;
         var re2 = /^#cuece/;
@@ -18,20 +17,20 @@ $(document).bind( "pagebeforechange", function( e, data ) {
         var re5 = /^#bandas/;
         var re6 = /^#banda/;
         
-        if ( u.hash.search(re1) !== -1 ) {            
+        if ( url.hash.search(re1) !== -1 ) {            
             getConciertos();
-        } else if ( u.hash.search(re2) !== -1 ) {            
+        } else if ( url.hash.search(re2) !== -1 ) {            
             getCuece();
-        } else if( u.hash.search(re3) !== -1 ){            
-            getNoticia(u, params, data.options);            
+        } else if( url.hash.search(re3) !== -1 ){            
+            getNoticia(url, params, data.options);            
             e.preventDefault()
-        } else if( u.hash.search(re4) !== -1 ){            
-            getConcierto(u, params, data.options);            
+        } else if( url.hash.search(re4) !== -1 ){            
+            getConcierto(url, params, data.options);            
             e.preventDefault()
-        } else if ( u.hash.search(re5) !== -1 ) {            
+        } else if ( url.hash.search(re5) !== -1 ) {            
             getBandas();
-        } else if( u.hash.search(re6) !== -1 ){            
-            getBanda(u, params, data.options);            
+        } else if( url.hash.search(re6) !== -1 ){            
+            getBanda(url, params, data.options);            
             e.preventDefault()
         } else {
             //e.preventDefault();
@@ -63,29 +62,37 @@ function getConciertos() {
 function getConcierto(url, params, options) {
     var id = params['id'];
     var $page = $('#dconcierto');
-    var contenido = 'No se encontró';    
+    var contenido = 'No se encontro';
+    //if ((typeof (conciertos) === 'undefined') || (conciertos === null)) {
+        //getConciertos();    
+                     
+    //}  else {
+        $.each(conciertos, function(index, pela) {
+            if(pela.id == id) {
+                contenido = '<h2 class="title">'+pela.title+'</h2>';  
+                contenido += '<div class="datosConcierto">';
+                contenido += '<div class="fechaConcierto">'+pela.date+'</div>';                      
+                contenido += '<p><img src="img/time-icon.png" /> '+pela.time+'</p>';
+                contenido += '<p><img src="img/venue-icon.png" /> '+pela.venue+'</p>';
+                contenido += '<p><img src="img/venue-icon.png" /> '+pela.location+'</p>';
+                contenido += '</div>';
+                contenido += '<div class="contenidoConcierto">'+pela.content+'</div>';            
+            }
+        });
+    //}
     
-    $.each(conciertos, function(index, pela) {
-        if(pela.id == id) {
-            contenido = '<h2 class="title">'+pela.title+'</h2>';  
-            contenido += '<div class="datosConcierto">';
-            contenido += '<div class="fechaConcierto">'+pela.date+'</div>';                      
-            contenido += '<p><img src="img/time-icon.png" /> '+pela.time+'</p>';
-            contenido += '<p><img src="img/venue-icon.png" /> '+pela.venue+'</p>';
-            contenido += '<p><img src="img/venue-icon.png" /> '+pela.location+'</p>';
-            contenido += '</div>';
-            contenido += '<div class="contenidoConcierto">'+pela.content+'</div>';            
-        }
-    });
     
     // Get the content element for the page to set it
     $content = $page.children( ":jqmData(role=content)" );
-    $content.html(contenido);
-    $content.find('div[data-role=collapsible-set]').collapsible({theme:'e',refresh:true});
+    $content.html(contenido);    
     
     // Actualizar URL
-    options.dataUrl = url.href;
-    $.mobile.changePage( $page, options );
+    options.dataUrl = url.href;    
+    //$.mobile.changePage( $page, options );
+    $.mobile.pageContainer.pagecontainer("change", $page, { 
+        transition: 'flip',
+        changeHash: false
+    });
         
 }
 
@@ -141,7 +148,10 @@ function getBanda(url, params, options) {
     
     // Actualizar URL
     options.dataUrl = url.href;
-    $.mobile.changePage( $page, options );
+    $.mobile.pageContainer.pagecontainer("change", $page, { 
+        transition: 'flip',
+        changeHash: false
+    });
         
 }
 
@@ -192,7 +202,10 @@ function getNoticia(url, params, options) {
     
     // Actualizar URL
     options.dataUrl = url.href;
-    $.mobile.changePage( $page, options );
+    $.mobile.pageContainer.pagecontainer("change", $page, { 
+        transition: 'flip',
+        changeHash: false
+    });
         
 }
 

@@ -74,7 +74,7 @@ function getConcierto(url, params, options) {
             contenido += '<p><img src="img/venue-icon.png" /> '+pela.venue+'</p>';
             contenido += '<p><img src="img/venue-icon.png" /> '+pela.location+'</p>';
             contenido += '</div>';
-            contenido += '<div class="contenidoConcierto">'+pela.content+'</div>';
+            contenido += '<div class="contenidoConcierto">'+pela.content+'</div>';            
         }
     });
     
@@ -129,7 +129,8 @@ function getBanda(url, params, options) {
         if(banda.id == id) {
             contenido = '<h2 class="title">'+banda.title+'</h2>';  
             contenido += '<p align="center"><img src="'+banda.thumb+'" /></p>';
-            contenido += '<div>'+banda.content+'</div>';            
+            contenido += '<div>'+banda.content+'</div>';
+            contenido += '<div class="audioBanda">'+banda.audio+'</div>';            
         }
     });
     
@@ -155,7 +156,7 @@ function getCuece() {
                 rpta = '<li>';
                 rpta += '<a href="#noticia?id='+pela.id+'">';
                 rpta += '<img src="'+pela.thumb+'">';
-                rpta += '<h3>'+pela.title+'</h3>';                                
+                rpta += '<h3 class="multiline">'+pela.title+'</h3>';                                
                 rpta += '</a>';
                 rpta += '</li>';
                 $("#cueceList").append(rpta);
@@ -220,4 +221,27 @@ function detener_musica() {
             $(this).get(0).pause();
             //$(this).get(0).currentTime = 0;
         });        
+}
+
+
+// Eventos
+$(function(){
+   $(".salir").click(function(){
+        showConfirm();
+   });
+});
+
+ function showConfirm() {
+    navigator.notification.confirm(
+        'Do you really want to exit?', // message
+        exitFromApp, // callback to invoke with index of button pressed
+        'Exit', // title
+        'Cancel,OK' // buttonLabels
+    );
+}
+ 
+function exitFromApp(buttonIndex) {
+    if (buttonIndex==2){
+        navigator.app.exitApp();
+    }
 }

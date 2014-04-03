@@ -91,8 +91,12 @@ h3 {
 **********************************/
 #nosotros, #nosotros .ui-content {
     background-color: #171717;    
-    height: 100%;
+    height: auto;
 }   
+.contenidos {
+    overflow: hidden;
+    clear: both;    
+}
 .contenidos a {
     color:#fff;
     text-decoration: none;
@@ -138,6 +142,16 @@ h3 {
 #cuece .ui-content{
     background-color: #171717;
     min-height: 100%; 
+}
+h3.multiline {
+    white-space: normal !important;
+    line-height: 15px;
+    max-height: 30px;
+    overflow: hidden;
+    word-wrap: break-word !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
 }
 
 /**********************************

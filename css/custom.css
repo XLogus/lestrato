@@ -231,6 +231,8 @@ h3.multiline {
     background-color: #840000;
     padding-bottom: 10px;
     padding-top: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-top: 5px;
     background-repeat: no-repeat;
     background-position: center 10px;
@@ -248,12 +250,14 @@ h3.multiline {
         background-image: url(../img/icon3.png);
     }
     
+    /*
     #mainNav a:hover{
         background-color: #ac0000;
         padding-top: 55px;
         margin-top: 0px;
         transition: 0.5s;
     }
+    */
 a#estrenosLink, a#promosLink{
     border-left: 1px solid #ffb8b8;
 }

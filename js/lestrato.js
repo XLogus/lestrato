@@ -3,6 +3,18 @@ var conciertos;
 var pelas;
 var bandas;
 
+
+// Load the spinner if an ajaxStart occurs; stop when it is finished
+$(document).on({
+  ajaxStart: function() { 
+    $.mobile.loading('show');
+  },
+  ajaxStop: function() {
+    $.mobile.loading('hide');
+  }    
+});
+
+
 $(document).bind( "pagebeforechange", function( e, data ) {  
     if ( typeof data.toPage === "string" ) {
         detener_musica();
@@ -39,8 +51,7 @@ $(document).bind( "pagebeforechange", function( e, data ) {
 });
 
 
-function getConciertos() {    
-    $.mobile.loading('show');        
+function getConciertos() {   
     $.getJSON(serviceURL + 'horizontes.php?jsoncallback=?').done(function(data) {           
             $('#conciertosList li').remove();    
             conciertos = data.items;             
@@ -240,21 +251,20 @@ function detener_musica() {
 // Eventos
 $(function(){
    $(".salir").click(function(){
-        showConfirm();
+        exitAppPopup();
    });
 });
 
- function showConfirm() {
-    navigator.notification.confirm(
-        'Do you really want to exit?', // message
-        exitFromApp, // callback to invoke with index of button pressed
-        'Exit', // title
-        'Cancel,OK' // buttonLabels
-    );
-}
- 
-function exitFromApp(buttonIndex) {
-    if (buttonIndex==2){
-        navigator.app.exitApp();
+    function exitAppPopup() {
+        navigator.notification.confirm(
+              'Exit PhoneGap ' + device.cordova + ' Demo?'
+            , function(button) {
+                  if (button == 2) {
+                      navigator.app.exitApp();
+                  }
+              }
+            , 'Exit'
+            , 'No,Yes'
+        );  
+        return false;
     }
-}

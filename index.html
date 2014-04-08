@@ -5,7 +5,7 @@
   <meta charset="utf-8">
 
   <title>Lestrato App Demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no;">
   <meta name="description" content="Lestrato App">
   <meta name="author" content="Miguel Manchego">  
 
@@ -21,10 +21,17 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
  
-
- <script src="js/jquery.min.js"></script>
+<script src="phonegap.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/jquery.mobile.min.js"></script>
-<script src="js/cordova-android.js"></script>
+<script type='text/javascript' >
+<!--Event Listners -->
+document.addEventListener('deviceready', function(){
+        <!--Comment out alert when not using -->
+        alert('PG Ready');     
+}, false);
+</script>
+
 
 <!--
 <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
@@ -43,9 +50,11 @@
             <img src="img/logo.png" />        
             <p>Trabajamos para disfrutar de los mejores conciertos de rock, aportando nuestro esfuerzo e ilusión tanto como organizadores, colaboradores o informadores. </p>
             <p>
-            [ <a href="#nosotros">Leer Más</a> ]  
+            [ <a href="#nosotros">Leer Más</a> ]
+            </p>  
             [ <p class="salir">Salir</p> ]          
-            </p>
+            [ <p class="exit">Salir2</p> ]
+            
         </div><!--#logoPortada-->
          
         </div><!--titularHome-->

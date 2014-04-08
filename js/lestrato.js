@@ -250,6 +250,16 @@ function detener_musica() {
 
 // Eventos
 $(function(){
+    
+    
+    $('a.exit').click(function() {
+                        localStorage.clear();
+                        navigator.app.exitApp();
+                        return true;
+                });
+    
+    
+    
    $(".salir").click(function(){
         exitAppPopup();
    });

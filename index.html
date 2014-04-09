@@ -51,10 +51,8 @@ document.addEventListener('deviceready', function(){
             <p>Trabajamos para disfrutar de los mejores conciertos de rock, aportando nuestro esfuerzo e ilusión tanto como organizadores, colaboradores o informadores. </p>
             <p>
             [ <a href="#nosotros">Leer Más</a> ]
-            </p>  
-            [ <p class="salir">Salir</p> ]          
-            [ <p><a class="exit">Salir2</a></p> ]
-            
+            </p>            
+            <a class="exit" href="" data-role="button" data-icon="delete" data-iconpos="left" data-mini="true" data-inline="true">Salir</a>
         </div><!--#logoPortada-->
          
         </div><!--titularHome-->
@@ -174,7 +172,7 @@ document.addEventListener('deviceready', function(){
         </a>
       </h1> 
    </div>
-   <div data-role="content">   
+   <div data-role="content" id="conciertoContent" >   
       <h2 class="title">Conciertos</h2>
         <ul data-role="listview" data-split-icon="plus" data-theme="a" data-split-theme="b" data-split-icon="plus" data-inset="true" id="conciertosList">
         
@@ -197,7 +195,7 @@ document.addEventListener('deviceready', function(){
         </a>
       </h1> 
    </div>
-   <div data-role="content">   
+   <div id="cueceContent" data-role="content">   
       <h2 class="title">Lo que se cuece</h2>
         <ul data-role="listview" data-split-icon="plus" data-theme="a" data-split-theme="b" data-split-icon="plus" data-inset="true" id="cueceList">
         

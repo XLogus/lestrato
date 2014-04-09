@@ -263,3 +263,8 @@ a#estrenosLink, a#promosLink{
 }
 
   
+#bandasContent, #conciertoContent, #cueceContent {
+    background-image: url(../img/ajax-loader.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+}  

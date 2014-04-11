@@ -89,7 +89,7 @@ function getConcierto(url, params, options) {
                 contenido += '</div>';
                 contenido += '<div class="contenidoConcierto">'+pela.content+'</div>';
                 if(pela.ticket != "") {            
-                    contenido += '<div class="ticketConcierto"><a class="exit" href="'+pela.ticket+'" data-rel="external" data-role="button" data-icon="action" data-iconpos="left" data-mini="true" data-inline="true">Comprar Tickets</a></div>';
+                    contenido += '<div class="ticketConcierto"><a class="exit" href="'+pela.ticket+'" data-ajax="false" data-rel="external" data-role="button" data-icon="action" data-iconpos="left" data-mini="true" data-inline="true">Comprar Tickets</a></div>';
                 }
             }
         });

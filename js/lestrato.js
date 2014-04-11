@@ -87,7 +87,10 @@ function getConcierto(url, params, options) {
                 contenido += '<p><img src="img/venue-icon.png" /> '+pela.venue+'</p>';
                 contenido += '<p><img src="img/venue-icon.png" /> '+pela.location+'</p>';
                 contenido += '</div>';
-                contenido += '<div class="contenidoConcierto">'+pela.content+'</div>';            
+                contenido += '<div class="contenidoConcierto">'+pela.content+'</div>';
+                if(pela.ticket != "") {            
+                    contenido += '<div class="ticketConcierto"><a class="exit" href="'+pela.ticket+'" target="_blank" data-role="button" data-icon="action" data-iconpos="left" data-mini="true" data-inline="true">Comprar Tickets</a></div>';
+                }
             }
         });
     //}

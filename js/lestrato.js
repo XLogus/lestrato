@@ -90,7 +90,7 @@ function getConcierto(url, params, options) {
                 contenido += '<div class="contenidoConcierto">'+pela.content+'</div>';
                 xtarget = '_system'
                 if(pela.ticket != "") {            
-                    contenido += '<div class="ticketConcierto"><a class="exit" href="'+pela.ticket+'" data-ajax="false" onclick="window.open(this.href,xtarget); return false;" data-rel="external" data-role="button" data-icon="action" data-iconpos="left" data-mini="true" data-inline="true">Comprar Tickets</a></div>';
+                    contenido += '<div class="ticketConcierto"><a href="'+pela.ticket+'" onclick="window.open(this.href,xtarget); return false;" class="ui-link ui-btn ui-icon-action ui-btn-icon-left ui-btn-inline ui-shadow ui-corner-all ui-mini">Comprar Tickets</a></div>';
                 }
             }
         });
@@ -99,14 +99,17 @@ function getConcierto(url, params, options) {
     
     // Get the content element for the page to set it
     $content = $page.children( ":jqmData(role=content)" );
-    $content.html(contenido);    
+    $content.html(contenido);
+    //$('.ticketConcierto a[data-role=button]').button();
+    //$content.find('a[data-role=button]').button({theme:'a',refresh:true});    
     
     // Actualizar URL
     options.dataUrl = url.href;    
     //$.mobile.changePage( $page, options );
     $.mobile.pageContainer.pagecontainer("change", $page, { 
         transition: 'flip',
-        changeHash: false
+        changeHash: false,
+        showLoadMsg: true
     });
         
 }

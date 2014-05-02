@@ -127,12 +127,12 @@ function getBandas() {
                 if(n==0) {
                     rpta += '<div class="ui-grid-a">';
                     rpta += '<div class="ui-block-a">';
-                    rpta += '<a href="#banda?id='+banda.id+'"><img src="'+banda.thumb+'" /></a>';
+                    rpta += '<a href="#banda?id='+banda.id+'"><img src="'+banda.thumb+'" /><div class="bandTitle">'+banda.title+'</div></a>';
                     rpta += '</div>';
                     n=1;
                 } else {                    
                     rpta += '<div class="ui-block-b">';
-                    rpta += '<a href="#banda?id='+banda.id+'"><img src="'+banda.thumb+'" /></a>';
+                    rpta += '<a href="#banda?id='+banda.id+'"><img src="'+banda.thumb+'" /><div class="bandTitle">'+banda.title+'</div></a>';
                     rpta += '</div>';
                     rpta += '</div>';
                     n=0;

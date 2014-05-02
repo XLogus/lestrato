@@ -112,10 +112,24 @@ h3 {
 #bandas .ui-content{
     background-color: #171717;
     min-height: 100%; 
+    max-width: 736px;
+    margin: auto;
+}
+.bandTitle {
+    background-color: #840000;
+    bottom: 0;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    padding: 10px 10px;
+    position: absolute;
+    width: 100%;
+    font-weight: normal;
+    font-size: 11.5px;
 }
 #bandasContent a{
     display: block;
     background-color:#840000;
+    position: relative;
 }
     #bandas a:hover img{
         opacity: 0.5;
